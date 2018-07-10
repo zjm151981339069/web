@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+	1.函数可以访问内部定义的变量 
+	2.函数可以访问外部定义的变量
+
 	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：闭包
+        -->
+		<p>局部变量计数。</p>
+		<button type="button" onclick="myFunction()">计数!</button>
+		<p id="demo">0</p>
+		<script>
+			var add = (function() {
+				var counter = 0;
+				return function() {
+					return counter += 1;
+				}
+			})();
+
+			function myFunction() {
+				document.getElementById("demo").innerHTML = add();
+			}
+		</script>
 	</body>
+
 </html>
