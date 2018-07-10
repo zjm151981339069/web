@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	 1.作为一个函数调用
+	 2.window.func 默认函数是全局对象 
+	 3.函数作为方法调用
+	 4.使用构造函数调用函数  new 
+	 5.作为函数方法调用函数  call  apply(以数组的方式传递参数) ，第一个值都是函数对象本身
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：函数作为方法调用
+        -->
+		<script>
+			var myObject = {
+				firstName: "John",
+				lastName: "Doe",
+				fullName: function() {
+					return this.firstName + " " + this.lastName;
+				}
+			}
+			alert(myObject.fullName());
+		</script>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：使用构造函数调用函数
+        -->
+        <script>
+        	function my(x,y){
+        		this.first=x;
+        		this.last=y;
+        	}
+        	var x = new my("a","b");
+        	alert(x.first);
+        </script>
+	</body>
+
+</html>

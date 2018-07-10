@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：局部变量在函数内可以使用
+        -->
+		<p>局部变量在声明的函数内可以访问。</p>
+		<p id="demo"></p>
+		<script>
+			myFunction();
+			document.getElementById("demo").innerHTML =
+				"我可以显示 " + typeof carName;
+
+			function myFunction() {
+				var carName = "Volvo";
+				alert(typeof carName);
+			}
+		</script>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：全局变量可以在函数外使用
+        -->
+		<p>
+			如果你的变量没有声明，它将自动成为全局变量：
+		</p>
+		<p id="demo1"></p>
+		<script>
+			myFunction();
+			document.getElementById("demo1").innerHTML =
+				"我可以显示 " + carName;
+
+			function myFunction() {
+				carName = "Volvo";
+			}
+		</script>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：所有的全局变量都会成为window变量
+        -->
+		<p>
+			在 HTML 中, 所有全局变量都会成为 window 变量。
+		</p>
+		<p id="demo2"></p>
+		<script>
+			myFunction();
+			document.getElementById("demo2").innerHTML =
+				"我可以显示 " + window.carName;
+
+			function myFunction() {
+				carName = "Volvo";
+			}
+		</script>
+	</body>
+
+</html>

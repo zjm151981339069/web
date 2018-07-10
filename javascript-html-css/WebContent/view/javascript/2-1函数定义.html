@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：函数可以通过表达式定义
+        -->
+		<p>函数可以存储在变量中:</p>
+		<p id="demo"></p>
+		<script>
+			var fu_demo = function(a, b) {
+				return a * b
+			};
+			document.getElementById("demo").innerHTML=fu_demo;
+		</script>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：函数可以通过表达式定义调用
+        	
+        -->
+        <script>
+			var fu_demo = function(a, b) {
+				return a * b
+			};
+			document.getElementById("demo").innerHTML=fu_demo(1,3);
+		</script>
+		
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：内置构造函数
+        -->
+        <script>
+        	var myfun = Function("a","b","return a+b");
+        	document.getElementById("demo").innerHTML=myfun(1,3);
+        </script>
+	</body>
+
+</html>

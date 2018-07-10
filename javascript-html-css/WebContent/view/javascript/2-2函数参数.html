@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：默认参数
+        -->
+        <script>
+			function my(x,y){
+				if(y==undefined){
+					y=0;
+				}
+				return x*y;
+			}
+			alert(my(1));
+        </script>
+        <!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：arguments  对象
+        -->
+        <script>
+        	function findMax(){
+        		var i;
+        		max=arguments[0];
+        		if(arguments.length<2){
+        			return max;
+        		}
+        		for (i=1;i<arguments.length;i++) {
+        			if(arguments[i]>max){
+        				max=arguments[i];
+        			}
+        		}
+        		return max;
+        	}
+        	alert("最大值："+findMax(1,2,3,55,6,78));
+        </script>
+        
+        <!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：函数参数传递-值传递，不会修改值本身
+        -->
+        <script>
+        	var x = 1;
+        	function valuf(x){
+        		x=x+1;
+        		alert("函数内部值："+x);
+        	}
+        	valuf(x);
+        	alert("函数外部："+x);
+        </script>
+        
+        <!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：函数引用传递
+        -->
+        <script>
+        	var obj={x:2};
+        	function yin(objs){
+        		objs.x++;
+        		alert("引用内部："+objs.x);
+        	}
+        	yin(obj);
+        	alert("引用外部"+obj.x);
+        </script>
+	</body>
+</html>

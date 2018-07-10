@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-10
+        	描述：Json转换
+        -->
+		<h2>为 JSON 字符串创建对象</h2>
+		<p id="demo"></p>
+		<script>
+			var text = '{"employees":[' +
+				'{"firstName":"John","lastName":"Doe" },' +
+				'{"firstName":"Anna","lastName":"Smith" },' +
+				'{"firstName":"Peter","lastName":"Jones" }]}';
+			var obj = JSON.parse(text);
+			document.getElementById("demo").innerHTML=obj.employees[1].firstName;
+		</script>
+	</body>
+
+</html>
