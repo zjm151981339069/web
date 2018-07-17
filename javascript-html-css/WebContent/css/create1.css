@@ -1,0 +1,15 @@
+hr {
+	color: sienna;
+}
+
+p {
+	margin-left: 20px;
+	background-color: greenyellow;
+}
+
+body {
+	background-image:url(../img/kaoheban_print.png);
+	background-repeat: no-repeat;
+	background-position: 50px 100px;
+	background-color: #111111;
+}

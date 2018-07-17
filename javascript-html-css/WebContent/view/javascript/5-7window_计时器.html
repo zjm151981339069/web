@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-17
+        	描述：间隔多少时间循环执行
+        -->
+		<button onclick="myFunction()">点我</button>
+		<script>
+			function myFunction() {
+				setInterval(function() {
+					alert("Hello")
+				}, 3000);
+			}
+		</script>
+
+		<!--
+        	作者：offline
+        	时间：2018-07-17
+        	描述：多少之后时间执
+        -->
+		<p>点击按钮，在等待 3 秒后弹出 "Hello"。</p>
+		<button onclick="myFunction1()">点我</button>
+		<script>
+			function myFunction1() {
+				setTimeout(function() {
+					alert("Hello")
+				}, 3000);
+			}
+		</script>
+	</body>
+
+</html>
