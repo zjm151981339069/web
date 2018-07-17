@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-16
+        	描述：date   类型
+        -->
+        <script>
+        	var d = new Date();
+        	document.write(d);
+        	document.write("<br>"+d.getFullYear());
+        	document.write("<br>"+d.getTime());
+        	document.write("<br>"+d.getDay());
+        	var t = setTimeout(function(){document.write(d.getMilliseconds());},500);
+        	t();
+        </script>
+	</body>
+</html>

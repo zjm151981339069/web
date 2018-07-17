@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			// 第一种方式
+			var mycars = new Array();
+			mycars[0] = "1";
+			mycars[1] = "2";
+			mycars[2] = "3";
+			// 简洁方式
+			var my = new Array("1", "2", "3");
+			// 字面的方式
+			var mys = ["1", "2", "3"];
+
+			// 原型，全局构造函数
+			//			Array.prototype.myUcase() = function() {
+			//				for(i = 0; i < this.length; i++) {
+			//					this[i] = this[i].toUpperCase();
+			//				}
+			//			}
+
+			function myFunction() {
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				x.innerHTML = fruits;
+			}
+
+			// 合并数组
+			var hege = ["Cecilie", "Lone"];
+			var stale = ["Emil", "Tobias", "Linus"];
+			var children = hege.concat(stale);
+			alert(children);
+			//合并三个
+		    var parents = ["Jani", "Tove"];
+			var brothers = ["Stale", "Kai Jim", "Borge"];
+			var children = ["Cecilie", "Lone"];
+			var family = parents.concat(brothers, children);
+			alert(family);
+			
+			// join  数组合并字符串
+		    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		    alert("join:"+fruits.join());
+			
+			
+			//末尾插入 push , 删除 最后pop ，reverse， shift , slice,sorte  
+		</script>
+		<button onclick="myFunction()">点我</button>
+		<p id="demo">单击按钮创建一个数组,调用ucase（）方法, 并显示结果。</p>
+	</body>
+
+</html>

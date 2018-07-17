@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<script>
+			var message = "hello world";
+			// 长度
+			var l = message.length;
+			var up = message.toUpperCase();
+
+			// 直接创建对象
+			var persion = new Object();
+			persion.firstName = "j";
+			persion.lastName = "d";
+			persion.age = 50;
+			persion.eyeClolor = "blue";
+			document.write(persion.firstName + " is " + persion.lastName);
+
+			//自定义对象
+			function person(firstname, lastname, age, eyecolor) {
+				this.firstname = firstname;
+				this.lastname = lastname;
+				this.age = age;
+				this.eyecolor = eyecolor;
+
+				function changeName(name) {
+					this.lastname = name;
+				}
+			}
+			myMother = new person("Sally", "Rally", 48, "green");
+			//myMother.changeName("Doe");
+			document.write(myMother.lastname);
+
+			// for in 
+			var x ;
+			var txt = "";
+			var person1 = {
+				fname: "Bill",
+				lname: "Gates",
+				age: 56
+			};
+			for (x in person1) {
+				txt = txt + person1[x];
+			}
+			var k = [];
+			alert(k.length);
+			document.getElementById("demo").innerHTML = txt;
+		</script>
+		<p id="demo"></p>
+	</body>
+
+</html>

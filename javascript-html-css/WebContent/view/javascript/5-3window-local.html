@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-16
+        	描述：local
+        -->
+		<script>
+			document.write(window.location.hostname);
+			document.write("<br>");
+			document.write(window.location.pathname);
+			document.write("<br>");
+			document.write(window.location.port);
+			document.write("<br>");
+			document.write(window.location.protocol);
+			document.write("<br>");
+			document.write(window.location.href);
+		</script>
+		<script>
+			function newDoc() {
+				window.location.assign("http://www.w3cschool.cn")
+			}
+		</script>
+		<input type="button" value="Load new document" onclick="newDoc()">
+	</body>
+
+</html>

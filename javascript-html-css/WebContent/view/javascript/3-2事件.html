@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-07-16
+        	描述：修改内容
+        -->
+		<h1 onclick="this.innerHTML='新修改!'"> 修改 </h1>
+		<script>
+			function changeText(id) {
+				id.innerHTML = "oops!" + Date();
+			}
+		</script>
+		<h1 onclick="changeText(this)"> 点击 </h1>
+		<!--
+        	作者：offline
+        	时间：2018-07-16
+        	描述：dom 元素分配事件
+        -->
+		<button id="myBtn">点这里</button>
+		<script>
+			document.getElementById("myBtn").onclick = function() {
+				displayDate();
+			};
+
+			function displayDate() {
+				document.getElementById("demo").innerHTML = Date();
+			}
+		</script>
+		<p id="demo"></p>
+
+		<!--
+        	作者：offline
+        	时间：2018-07-16
+        	描述：onload 和 onunload 事件
+        -->
+		<h1 onload="checkcook()"> cookie </h1>
+		<script>
+			function checkcook() {
+				if(navigator.cookieEnabled == true) {
+					alert("true");
+				} else {
+					alert("false");
+				}
+			}
+		</script>
+
+		<!--
+        	作者：offline
+        	时间：2018-07-16
+        	描述：onchange
+        -->
+		<script>
+			function myFunction() {
+				var x = document.getElementById("fname");
+				x.value = x.value.toUpperCase();
+			}
+		</script>
+		输入你的名字: <input type="text" id="fname" onchange="myFunction()">
+	</body>
+
+</html>

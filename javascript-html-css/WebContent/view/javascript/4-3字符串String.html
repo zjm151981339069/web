@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			var carname = "Volvo XC60";
+			// 取对应的Index
+			alert(carname[3]);
+			// length;
+			alert(carname.length);
+			// index
+			var str = "Hello world, welcome to the universe.";
+			var n = str.indexOf("welcome");
+			alert(n);
+
+			// 匹配
+			var str = "Hello world!";
+			document.write(str.match("world") + "<br>");
+			//document.write(str.match("World") + "<br>");
+			document.write(str.match("world!"));
+			//replace() ;
+			var re =  str.replace("Hello","Hello1")
+			alert(str);
+			alert(re.match("Hello1"));
+			
+			// 大小写
+			re.toUpperCase();
+			re.toLowerCase();
+		</script>
+	</body>
+
+</html>
