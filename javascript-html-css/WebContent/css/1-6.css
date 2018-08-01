@@ -1,0 +1,16 @@
+p {
+	font-family: "times new roman", times, serif;
+}
+
+p.normal {
+	font-style: normal;
+}
+
+p.italic {
+	font-style: italic;
+}
+
+p.oblique {
+	font-style: oblique;
+	font-size: 50px;
+}
