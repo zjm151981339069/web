@@ -1,0 +1,21 @@
+table,
+th,
+td {
+	border: 1px solid green;
+}
+table{
+	border-collapse: collapse;
+	width: 90%;
+}
+th{
+	height: 50px;
+	background-color: royalblue;
+	color: darkcyan;
+}
+td{
+	text-align: center;
+	vertical-align: bottom;
+	height: 40px;
+	padding: 15px;
+}
+
