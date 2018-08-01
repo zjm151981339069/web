@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<style>
+			input.ng-pristine {
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form ng-app="myApp" ng-controller="myCtrl" name="myForm">
+			名字：<input ng-model="name" /> 邮箱：
+			<input type="email" ng-model="em" name="myAddress" required="required"/> 输入：
+			<span ng-bind="name"></span>
+			<span ng-show="myForm.my.$error.em"> 错误</span>
+			<!--
+            	作者：offline
+            	时间：2018-08-01
+            	描述：监控状态
+            -->
+			<p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+			<p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>
+			<p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+		</form>
+		<script>
+			var app = angular.module("myApp", []);
+			app.controller("myCtrl", function($scope) {
+				$scope.name = "john Doe";
+			});
+		</script>
+	</body>
+
+</html>

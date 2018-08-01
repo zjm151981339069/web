@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.js"></script>
+	</head>
+
+	<body>
+		<div ng-app="" ng-init="qua=1.7;cost=2.4;person={f:'join',l:'ok'};">
+			<p>总价：{{qua*cost}}</p>
+			<p>sum: <span ng-bind="qua*cost+1.2"></span> </p>
+			<p>姓名 <span ng-bind="person.f"></span> </p>
+		</div>
+	</body>
+
+</html>

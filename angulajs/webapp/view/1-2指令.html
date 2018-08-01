@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.js"></script>
+	</head>
+
+	<body>
+		<div ng-app="" ng-init="firstName='join';names=['j','k','L']">
+			<!--
+            	作者：offline
+            	时间：2018-08-01
+            	描述：数据绑定
+            -->
+			<p>input</p>
+			<p> 姓名：<input type="text" ng-model="firstName" /> </p>
+			<p> 输入的姓名为：{{firstName}}</p>
+			<!--
+            	作者：offline
+            	时间：2018-08-01
+            	描述：重复元素
+            -->
+			<ul>
+				<li ng-repeat="x in names">
+					{{ x }}
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.js" ></script>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<input ng-model="name" />
+			<h1>{{greeting}}</h1>
+			<h2>{{last}}</h2>
+			<button ng-click="sayHello()">点击</button>
+		</div>
+		
+		<!--
+        	作者：offline
+        	时间：2018-08-01
+        	描述：数据双向绑定
+        	rootScope   scope    变量作用域 
+        -->
+		<script>
+			var app = angular.module("myApp",[]);
+			app.controller("myCtrl",function($scope,$rootScope){
+				$scope.name='LLLL';
+				$rootScope.last='kkkkkk';
+				$scope.sayHello=function(){
+					$scope.greeting='hello'+$scope.name+'！';
+				}
+			});
+		</script>
+	</body>
+</html>

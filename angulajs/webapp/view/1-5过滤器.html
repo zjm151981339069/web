@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.js"></script>
+	</head>
+
+	<body>
+		<div ng-app="myApp" ng-controller="namesCtrl" ng-init="ok=uuuu111">
+			<input ng-model="name" />
+			<input type="number" ng-model="money" />
+			<p>{{name | uppercase}}</p>
+			<p>{{money | currency}}</p>
+			{{oks | reverse}}
+			<!--
+            	作者：offline
+            	时间：2018-08-01
+            	描述：过滤器
+            -->
+			<ul>
+				<li ng-repeat="x in names | filter:name | orderBy:'country'">
+					{{(x.name | uppercase) + "," + x.country}}
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller('namesCtrl', function($scope) {
+			$scope.oks = "Runoob";
+		});
+		
+		
+		//   自定义过滤器
+		app.filter("reverse", function() {
+			return function(text) {
+				return text + "!";
+			}
+		});
+	</script>
+
+</html>
